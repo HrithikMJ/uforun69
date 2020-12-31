@@ -1,6 +1,5 @@
-""""
-https://github.com/HrithikMJ/uforun69
-""""
+"https://github.com/HrithikMJ/uforun69"
+
 import pgzrun
 import random
 import pygame
