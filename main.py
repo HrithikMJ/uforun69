@@ -1,3 +1,6 @@
+""""
+https://github.com/HrithikMJ/uforun69
+""""
 import pgzrun
 import random
 import pygame
@@ -8,7 +11,6 @@ TITLE = 'UFO RUN 69'
 WIDTH = 400
 HEIGHT = 708
 
-# These constants control the difficulty of the game
 GAP = 130
 GRAVITY = 0.3
 FLAP_STRENGTH = 6.5
@@ -78,7 +80,8 @@ def update():
 
 
 def on_key_down():
-    if not ufo.dead:
+
+      if not ufo.dead:
         ufo.vy = -FLAP_STRENGTH
 
 
@@ -97,7 +100,6 @@ def draw():
         fontsize=70,
         shadow=(1, 1)
     )
-
-
-
-pgzrun.go()
+kint=input("press space bar to continue or anyother key to exit")
+if kint==' ' or kint=='  ':
+  pgzrun.go()
