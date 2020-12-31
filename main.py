@@ -3,7 +3,7 @@
 import pgzrun
 import random
 import pygame
-
+import os
 
 
 TITLE = 'UFO RUN 69'
@@ -20,7 +20,13 @@ ufo.dead = False
 ufo.score = 0
 ufo.vy = 0
 
-
+def screen_clear():  #to clear screen
+   # for mac and linux
+   if os.name == 'posix':
+      _ = os.system('clear')
+   else:
+      # for windows platfrom
+      _ = os.system('cls')
 
 
 def reset_pipes():
@@ -64,6 +70,7 @@ def update_ufo():
         ufo.image = 'ufo_die'
         music.stop()
         sounds.negative.play()
+    
 
     if not 0 < ufo.y < 720:
         ufo.y = 200
@@ -102,3 +109,5 @@ def draw():
 kint=input("press space bar to continue or anyother key to exit")
 if kint==' ' or kint=='  ':
   pgzrun.go()
+screen_clear()
+print("\033[95m"+"\033[1m" + "\n\nCongratulations "+"\033[4m"+"\033[1m"+"\033[0m" +" on scoring "+"\033[0m"+"\033[4m"+"\033[1m"+str(ufo.score)+"\033[0m"  )
